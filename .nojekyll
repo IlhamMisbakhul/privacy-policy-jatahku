@@ -1,0 +1,3 @@
+# This site is a plain static website with no Jekyll-specific content.
+# .nojekyll keeps GitHub Pages from running Jekyll over the published files,
+# so every asset under css/, js/ and js/locales/ is served exactly as committed.

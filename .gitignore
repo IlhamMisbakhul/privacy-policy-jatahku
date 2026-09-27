@@ -1,0 +1,16 @@
+# Documentation / Internal Specifications
+docs/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor & Tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Scratchpad / Local Server logs
+node_modules/
+*.log

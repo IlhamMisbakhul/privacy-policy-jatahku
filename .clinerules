@@ -1,0 +1,627 @@
+# Cline Rules — Privacy Policy Website
+
+## 1. Project Purpose
+
+This repository is a **separate static website project** for the app's Google Play Store administration requirements.
+
+The website currently has only two responsibilities:
+
+1. Serve the app's **Privacy Policy**.
+2. Provide a **language gateway / language-aware presentation layer** for that Privacy Policy.
+
+This is **not** the Flutter application project.
+
+### Critical rule
+
+Do **not** infer, invent, or assume app features, permissions, data collection, SDKs, third-party services, storage behavior, or technical implementation details.
+
+The website project does not have authority to define the app's functionality.
+
+All app-specific facts must come from dedicated specification files such as:
+
+- `docs/app-spec.md`
+- `docs/privacy-policy-spec.md`
+
+If those files do not provide enough information for a factual statement, **do not invent an answer**. Mark the missing information clearly and ask for clarification when required.
+
+---
+
+## 2. Language Support
+
+The website supports exactly these 14 languages:
+
+| Language | BCP 47 / Primary Code |
+|---|---|
+| Indonesian | `id` |
+| Malay | `ms` |
+| English | `en` |
+| Spanish | `es` |
+| Dutch | `nl` |
+| Italian | `it` |
+| Portuguese | `pt` |
+| French | `fr` |
+| Japanese | `ja` |
+| Korean | `ko` |
+| Russian | `ru` |
+| Mandarin Chinese | `zh` |
+| Arabic | `ar` |
+| Hindi | `hi` |
+
+### Fallback rule
+
+English (`en`) is always the fallback language.
+
+If a detected or requested language is not supported, use English.
+
+If a supported language exists but its translation is missing or incomplete, use the English text for the missing content rather than displaying broken, empty, or placeholder UI.
+
+Do not silently invent translations for legally important Privacy Policy content.
+
+---
+
+## 3. Single-URL Architecture
+
+The website must use a **single public Privacy Policy URL** rather than creating separate pages for every language.
+
+Example:
+
+`https://<github-pages-domain>/`
+
+Language selection must change the content dynamically without navigating to a separate language-specific Privacy Policy page.
+
+### App-to-website language handoff
+
+The Flutter app may provide its currently selected application language when opening the website.
+
+Use a query parameter for this handoff:
+
+`?lang=<language-code>`
+
+Examples:
+
+- `?lang=id`
+- `?lang=en`
+- `?lang=ja`
+- `?lang=ar`
+
+The query parameter should have higher priority than browser-language detection.
+
+Priority order:
+
+1. Explicit `lang` query parameter supplied by the app or current URL.
+2. User's manually selected website language, when already persisted.
+3. Browser/device language detection.
+4. English fallback.
+
+A query parameter must never contain arbitrary executable content and must be validated against the supported language list.
+
+---
+
+## 4. Automatic Language Detection
+
+On initial load, when no valid `lang` query parameter is supplied:
+
+- Detect the browser/device language using standard browser APIs such as `navigator.languages` and `navigator.language`.
+- Match supported languages using the language tag prefix where appropriate.
+- Example: `id-ID` should resolve to `id`.
+- Example: `en-US` or `en-GB` should resolve to `en`.
+- Example: `pt-BR` should resolve to `pt`.
+- If no supported language matches, use English.
+
+Do not use IP geolocation, GPS, precise location, or server-side location detection.
+
+The website must remain a static GitHub Pages site.
+
+---
+
+## 5. Manual Language Selection
+
+Although the website automatically determines the language, the user must always have a visible and accessible way to change it.
+
+The language selector must:
+
+- Display all 14 supported languages.
+- Use human-readable language names.
+- Not require the user to manually select a language before the first page load.
+- Update the Privacy Policy content immediately.
+- Persist the user's website-language preference locally when practical.
+- Keep the same single public URL.
+- Prefer a validated `?lang=<code>` state when synchronizing/share-linking the selected language.
+- Never reload into an unsupported language.
+
+Do not create 14 separate HTML pages just to implement localization.
+
+---
+
+## 6. RTL Language Support
+
+Arabic (`ar`) must use right-to-left layout.
+
+The implementation should use the document direction appropriately, for example:
+
+- `dir="rtl"` for Arabic
+- `dir="ltr"` for other supported languages
+
+Do not create a separate Arabic page.
+
+Check:
+
+- headings
+- paragraphs
+- lists
+- language selector
+- buttons
+- spacing
+- inline links
+- footer
+- text alignment
+
+The layout must remain readable in both LTR and RTL modes.
+
+---
+
+## 7. Technology Constraints
+
+Use only:
+
+- HTML
+- CSS
+- Vanilla JavaScript
+
+Do not introduce:
+
+- React
+- Vue
+- Angular
+- Next.js
+- Astro
+- Svelte
+- Tailwind CSS
+- Bootstrap
+- jQuery
+- frontend frameworks
+- build systems that are unnecessary for this static website
+
+Avoid adding dependencies unless there is a clear technical requirement and the change is explicitly approved.
+
+---
+
+## 8. Static-Site Requirement
+
+The final website must work as a static GitHub Pages site.
+
+Do not require:
+
+- a backend
+- a server
+- server-side rendering
+- an API
+- a database
+- authentication
+- server-side localization
+- unnecessary cookies
+
+All language selection and content switching should happen client-side.
+
+---
+
+## 9. Privacy Policy Source of Truth
+
+Privacy Policy content must come from:
+
+`docs/privacy-policy-spec.md`
+
+Application facts must come from:
+
+`docs/app-spec.md`
+
+### Important separation
+
+Do not mix:
+
+- website implementation rules
+- app feature assumptions
+- Privacy Policy legal/content requirements
+
+The `.clinerules` file controls implementation behavior.
+
+The specification files control factual/content requirements.
+
+If there is a conflict:
+
+1. Do not invent a resolution.
+2. Flag the conflict.
+3. Ask for clarification before making a legal/factual claim.
+
+---
+
+## 10. Privacy Policy Content Rules
+
+The Privacy Policy must be clear, readable, and suitable for a mobile-app publisher.
+
+Do not add generic claims merely because they are common in Privacy Policies.
+
+Only state claims supported by `docs/privacy-policy-spec.md`.
+
+Do not claim that the app:
+
+- collects data
+- does not collect data
+- uses analytics
+- does not use analytics
+- uses advertising
+- does not use advertising
+- uses a specific SDK
+- uses a backend
+- stores data locally
+- uploads data
+- uses GPS/location
+- uses contacts
+- uses camera/microphone
+- shares data with third parties
+
+unless those facts are explicitly supported by the project specifications.
+
+---
+
+## 11. Localization Data Design
+
+Keep localized Privacy Policy content separate from presentation logic.
+
+Prefer a maintainable structure such as:
+
+- one JavaScript localization object/data module, or
+- separate translation data files if clearly justified.
+
+Do not duplicate HTML structures 14 times.
+
+The UI structure should remain shared.
+
+Only localized strings/content should change.
+
+Translation keys must remain stable and descriptive.
+
+Example pattern:
+
+```js
+privacyPolicy: {
+  title: "...",
+  introduction: "...",
+  dataCollection: "...",
+  localStorage: "...",
+  thirdPartyServices: "..."
+}
+```
+
+Do not hard-code large amounts of Privacy Policy text directly into rendering logic.
+
+---
+
+## 12. Translation Rules
+
+Each supported language must preserve the same meaning and legal scope as the source Privacy Policy.
+
+Do not:
+
+- add new claims
+- remove material claims
+- reinterpret legal requirements
+- paraphrase technical facts into something stronger or weaker
+- invent localized features
+
+English is the fallback source for missing translations.
+
+When a translation is unavailable, use the corresponding English content rather than fabricated translation text.
+
+For legal/privacy content, accuracy is more important than stylistic localization.
+
+---
+
+## 13. Visual Design
+
+The website should share the app's overall design language:
+
+- modern
+- clean
+- personal
+- simple
+- approachable
+- not visually "default Flutter"
+
+However, the website has its own color emphasis.
+
+### Primary color
+
+Use **blue as the main visual color**.
+
+The blue palette should communicate:
+
+- trust
+- clarity
+- reliability
+- professionalism
+
+Do not turn the entire page into a blue wall.
+
+Use blue primarily for:
+
+- key accents
+- links
+- active states
+- primary controls
+- subtle highlights
+
+Keep the overall presentation calm and readable.
+
+Avoid excessive gradients, oversized decorative elements, glassmorphism, heavy shadows, or unnecessary visual effects.
+
+---
+
+## 14. Responsive Design
+
+The website must work well on:
+
+- Android phones
+- iPhones
+- tablets
+- desktop browsers
+
+Design mobile-first.
+
+Privacy Policy pages are text-heavy, so optimize for reading comfort:
+
+- readable line length
+- comfortable line spacing
+- clear headings
+- strong hierarchy
+- adequate margins
+- accessible contrast
+- responsive typography
+
+Do not allow long paragraphs to span the full desktop viewport.
+
+---
+
+## 15. Accessibility
+
+The website must be accessible and semantic.
+
+Use:
+
+- semantic HTML
+- proper heading hierarchy
+- accessible labels
+- keyboard-accessible controls
+- visible focus states
+- sufficient color contrast
+- meaningful link text
+
+The language selector must be usable without a mouse.
+
+Do not rely on color alone to communicate state.
+
+Respect reduced-motion preferences when adding animations.
+
+---
+
+## 16. URL and State Behavior
+
+The website should support direct opening with a language parameter.
+
+Examples:
+
+```text
+/?lang=id
+/?lang=en
+/?lang=ja
+/?lang=ar
+```
+
+A valid language parameter should immediately render that language.
+
+An invalid language parameter should fall back safely to browser detection or English according to the priority rules.
+
+Changing the language should not create additional HTML pages.
+
+Avoid unnecessary full-page reloads for language changes.
+
+If the chosen language is written back to the URL, use a safe URL API such as `URLSearchParams`.
+
+---
+
+## 17. Browser Storage
+
+A small client-side preference may be stored for the manually chosen website language.
+
+Use browser storage only for this preference.
+
+Do not store financial data, Privacy Policy content, or app data in website storage.
+
+Do not create a tracking system.
+
+If local storage is used, its purpose must be limited to user experience for language preference.
+
+---
+
+## 18. No Tracking by Default
+
+The website must not add analytics, advertising, trackers, telemetry, fingerprinting, or unnecessary third-party scripts unless explicitly requested.
+
+Avoid external dependencies that collect user information.
+
+Keep the Privacy Policy website itself as simple and privacy-preserving as possible.
+
+---
+
+## 19. External Links
+
+External links may be present only when required by the approved Privacy Policy specification.
+
+Do not invent:
+
+- developer contact links
+- donation links
+- support links
+- social media links
+- app store links
+- third-party service URLs
+
+Use exactly the URLs provided by the project specifications.
+
+---
+
+## 20. GitHub Pages Compatibility
+
+The site must be deployable from a GitHub repository using GitHub Pages.
+
+Do not depend on server-side routing.
+
+Avoid assuming that rewrite rules or backend redirects exist.
+
+The implementation must work from the GitHub Pages hosting environment.
+
+Use relative asset paths that remain valid when the site is hosted under a GitHub Pages project path.
+
+Before finalizing, verify links and assets against the intended GitHub Pages base path.
+
+---
+
+## 21. File Structure
+
+Keep the project simple.
+
+A reasonable starting structure is:
+
+```text
+/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── app.js
+│   └── i18n.js
+├── docs/
+│   ├── app-spec.md
+│   └── privacy-policy-spec.md
+└── .clinerules
+```
+
+This is a guideline, not a requirement.
+
+Do not create files merely to increase structure.
+
+Prefer a small, understandable codebase.
+
+---
+
+## 22. Implementation Discipline
+
+Before changing code:
+
+1. Inspect the existing repository.
+2. Identify the current file structure.
+3. Read the relevant specification files.
+4. Confirm what is actually required.
+5. Make the smallest change that satisfies the requirement.
+
+Do not perform unrelated refactors.
+
+Do not rewrite working code merely for stylistic preference.
+
+Do not add features that were not requested.
+
+Do not add frameworks "for future scalability."
+
+Do not redesign the app itself from this repository.
+
+---
+
+## 23. Validation Requirements
+
+Before considering a task complete, validate at minimum:
+
+### Language behavior
+
+- all 14 language codes resolve correctly
+- unsupported language falls back to English
+- browser language detection works
+- query parameter language override works
+- manual language switching works
+- persisted manual language preference works
+- Arabic RTL works
+- direct links with `?lang=` work
+
+### Privacy Policy
+
+- content comes only from the approved specification
+- no unsupported app claims were added
+- all required sections are present according to the specification
+- missing translations safely fall back to English
+
+### Responsive UI
+
+Check at least:
+
+- narrow mobile viewport
+- normal mobile viewport
+- tablet viewport
+- desktop viewport
+
+### Accessibility
+
+Check:
+
+- keyboard navigation
+- focus visibility
+- heading hierarchy
+- contrast
+- language selector accessibility
+- RTL readability
+
+### Deployment
+
+Confirm:
+
+- relative paths work
+- GitHub Pages hosting path does not break assets
+- no server-side feature is required
+- there are no broken internal references
+
+---
+
+## 24. Scope Control
+
+When asked to implement a task, change only what is necessary.
+
+Do not combine unrelated improvements into the same change.
+
+Examples of out-of-scope work unless explicitly requested:
+
+- redesigning the Flutter app
+- changing app functionality
+- adding analytics
+- adding a CMS
+- adding a backend
+- adding a blog
+- adding a landing/marketing page
+- adding a contact form
+- adding authentication
+- adding a database
+- creating language-specific pages
+- changing hosting providers
+
+---
+
+## 25. Completion Behavior
+
+After implementation:
+
+1. Run the relevant checks.
+2. Fix only issues caused by the current task.
+3. Re-run the checks.
+4. Report the exact files changed and what was implemented.
+5. Stop.
+
+Do not continue with optional improvements after the requested task is complete.
+
+When the user asks for a specification, plan, or rules file only, do not modify unrelated source files unless explicitly requested.
