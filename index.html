@@ -57,6 +57,125 @@
           JavaScript. Please enable JavaScript to read the policy.
         </p>
       </noscript>
+
+      <!-- Static English fallback (mirrors js/locales/en.js verbatim). When
+           JavaScript runs, js/app.js replaces this block with the active
+           locale so no duplicate content is rendered. -->
+      <section class="policy-section" id="introduction" aria-labelledby="introduction-heading">
+        <h2 id="introduction-heading">Introduction</h2>
+        <p>This Privacy Policy explains how information is handled by MyBudget, a personal finance and budgeting application for Android provided by Muhammad Ilham Misbakhul Anwar.</p>
+        <p>It covers the information you can enter into the application, where that information is stored, when information can leave the application because of an action you take yourself, which external destinations the application can open, and how you can contact the developer.</p>
+        <p>This Privacy Policy applies to the application and to this website. It does not apply to external services that you open from the application.</p>
+      </section>
+      <section class="policy-section" id="informationYouProvide" aria-labelledby="informationYouProvide-heading">
+        <h2 id="informationYouProvide-heading">Information You Provide</h2>
+        <p>You can enter personal financial information into the application yourself. The application specification supports these types of information:</p>
+        <ul>
+          <li>Budget and balance amounts, such as the monthly budget or balance used by the application</li>
+          <li>Expense records that you record</li>
+          <li>Expense categories assigned to those records</li>
+          <li>Money source names and the type of each source</li>
+          <li>Remaining balances of each money source</li>
+          <li>Transfers of funds between your own money sources</li>
+          <li>The monthly report information generated from the records above</li>
+        </ul>
+        <p>This Privacy Policy does not describe other categories of personal information, because the application specification does not define them. In particular, the application is not described as collecting account credentials, contacts, messages, photos, recordings or similar data.</p>
+      </section>
+      <section class="policy-section" id="localStorage" aria-labelledby="localStorage-heading">
+        <h2 id="localStorage-heading">Local Storage</h2>
+        <p>Under the current architecture, the application's core financial records are stored locally on your device. The current implementation uses SQLite for local application storage.</p>
+        <p>Local storage is different from cloud storage. Your records are kept on the device itself, and the application does not require a developer-operated remote financial database for its normal financial-management functionality. The application also does not require a user account for normal use.</p>
+        <p>Because you can export and share information yourself, and because the application can open external destinations, this Privacy Policy does not claim that information can never leave your device.</p>
+      </section>
+      <section class="policy-section" id="deviceDateTime" aria-labelledby="deviceDateTime-heading">
+        <h2 id="deviceDateTime-heading">Device Date and Time</h2>
+        <p>The application uses your device's local date and time for behaviour that depends on the current date, such as determining the current month, assigning dates to records, monthly reporting, and date-based notification or reminder behaviour where applicable.</p>
+        <p>Using the device's local time does not mean that the application uses GPS or physical-location services to determine the current time. This Privacy Policy does not describe the use of device time as location tracking.</p>
+      </section>
+      <section class="policy-section" id="notifications" aria-labelledby="notifications-heading">
+        <h2 id="notifications-heading">Notifications</h2>
+        <p>The application includes notification functionality. On Android versions where notification permission is required, the application may request the POST_NOTIFICATIONS permission. That permission is used for the application's notification and reminder functionality.</p>
+        <p>You can control notification permission through your device or application permission settings. If you deny notification permission, notification-related functionality may be unavailable or limited.</p>
+        <p>Notification permission does not by itself grant access to your physical location. This Privacy Policy does not state a specific notification schedule, frequency or message, because the application specification does not document one.</p>
+      </section>
+      <section class="policy-section" id="exportAndSharing" aria-labelledby="exportAndSharing-heading">
+        <h2 id="exportAndSharing-heading">Export and User-Initiated Sharing</h2>
+        <p>The application supports exporting a report as PDF or XLSX. Exporting is started by you, for the report or month you select, and the report is generated from your local records.</p>
+        <p>You choose the destination application or service through Android's sharing functionality. The application specification does not define any mechanism through which exported files are sent to the developer, and this Privacy Policy does not describe one.</p>
+        <p>Once you share a file, the receiving application or service is outside the application's control, and that party's own privacy practices may apply to the information in that file.</p>
+      </section>
+      <section class="policy-section" id="thirdPartyServices" aria-labelledby="thirdPartyServices-heading">
+        <h2 id="thirdPartyServices-heading">Third-Party Services</h2>
+        <p>The application includes a donation entry point for supporting development, which provides external options such as Saweria and Ko-fi. These are third-party services.</p>
+        <p>When you use that entry point, the application opens the external destination using your platform's browser or sharing functionality rather than handling the service inside the application. Those services are not controlled by the developer, and their own privacy practices may apply when you visit or use them.</p>
+        <p>This Privacy Policy does not describe payment processing details, account requirements, data-sharing flows or analytics behaviour of those services, because the application specification does not document them.</p>
+      </section>
+      <section class="policy-section" id="advertising" aria-labelledby="advertising-heading">
+        <h2 id="advertising-heading">Advertising</h2>
+        <p>According to the current application specification, the application does not contain advertisements as part of its functionality.</p>
+        <p>This Privacy Policy does not make further statements about advertising identifiers or advertising networks, because the application specification does not document them.</p>
+      </section>
+      <section class="policy-section" id="analyticsAndTracking" aria-labelledby="analyticsAndTracking-heading">
+        <h2 id="analyticsAndTracking-heading">Analytics and Tracking</h2>
+        <p>The current application specification does not document analytics, telemetry, fingerprinting, tracking or advertising-identifier functionality in the application.</p>
+        <p>This Privacy Policy therefore does not describe any such functionality, and it does not describe any third-party tracking service.</p>
+        <p>If functionality of this kind is added to the application in the future, this Privacy Policy will be updated as described in the section “Changes to This Privacy Policy”.</p>
+      </section>
+      <section class="policy-section" id="accountRequirements" aria-labelledby="accountRequirements-heading">
+        <h2 id="accountRequirements-heading">Account Requirements</h2>
+        <p>According to the current application specification, no user account is required for normal personal finance functionality. There is no registration, password or login step for normal use.</p>
+        <p>Because no account exists, this Privacy Policy does not describe account profiles, credentials or account recovery.</p>
+      </section>
+      <section class="policy-section" id="dataSharingAndDisclosure" aria-labelledby="dataSharingAndDisclosure-heading">
+        <h2 id="dataSharingAndDisclosure-heading">Data Sharing and Disclosure</h2>
+        <p>Under the current architecture, your core financial records are stored locally on your device. The application specification does not document a developer-operated remote financial database, and it does not document a mechanism that transmits those records to the developer during normal use.</p>
+        <p>Information can leave the application's local environment when you act intentionally:</p>
+        <ul>
+          <li>You export a report and share the resulting file with an application or service you choose.</li>
+          <li>You open a documented external third-party service from the application.</li>
+        </ul>
+        <p>This Privacy Policy does not describe any other data-sharing flow, because no other flow is documented in the application specification.</p>
+      </section>
+      <section class="policy-section" id="dataRetention" aria-labelledby="dataRetention-heading">
+        <h2 id="dataRetention-heading">Data Retention</h2>
+        <p>Under the current architecture, your core financial records are kept on your own device, and the application specification does not define a developer-side retention period for them.</p>
+        <p>Because no developer-operated remote financial database is documented, this Privacy Policy does not state a numerical retention period. Files that you export or share are separate copies that exist outside the application.</p>
+      </section>
+      <section class="policy-section" id="dataDeletion" aria-labelledby="dataDeletion-heading">
+        <h2 id="dataDeletion-heading">Data Deletion</h2>
+        <p>Your core financial records are stored locally on your device under the current architecture, and the application specification does not define a developer-operated remote financial database that would hold a copy of them.</p>
+        <p>The application specification also does not document a dedicated “delete all data” feature inside the application, so this Privacy Policy does not describe a specific in-app deletion workflow or a deletion button.</p>
+        <p>Files that you export or share are copies you created and sent to a destination you chose; those copies exist outside the application.</p>
+        <p>If a dedicated deletion feature is added to the application in the future, this Privacy Policy will be updated to describe it accurately.</p>
+      </section>
+      <section class="policy-section" id="dataSecurity" aria-labelledby="dataSecurity-heading">
+        <h2 id="dataSecurity-heading">Data Security</h2>
+        <p>The application stores your core financial information locally on your device. Because those records live on the device, reasonable care with access to the device itself helps protect them, and anyone with access to your unlocked device and the application may be able to view the local records.</p>
+        <p>This Privacy Policy does not claim end-to-end encryption, guaranteed security, zero-risk storage or guaranteed recovery of records, because the application specification does not support those claims.</p>
+      </section>
+      <section class="policy-section" id="childrensPrivacy" aria-labelledby="childrensPrivacy-heading">
+        <h2 id="childrensPrivacy-heading">Children's Privacy</h2>
+        <p>The application is a personal finance and budgeting tool. The application specification does not describe the application as a product directed to children, and no age threshold has been defined for it, so this Privacy Policy does not state one.</p>
+        <p>The application specification does not document a developer-operated service that collects financial records from users; under the current architecture those records are stored locally on the user's device.</p>
+        <p>If an intended audience or an age requirement is defined for the application in the future, this Privacy Policy will be updated accordingly.</p>
+      </section>
+      <section class="policy-section" id="changesToPolicy" aria-labelledby="changesToPolicy-heading">
+        <h2 id="changesToPolicy-heading">Changes to This Privacy Policy</h2>
+        <p>This Privacy Policy may be updated when the application or its privacy-related behaviour changes.</p>
+        <p>The effective date and the latest update date are shown on this page. When a change materially affects how information is handled, the content of this page will be updated consistently with the application specification.</p>
+      </section>
+      <section class="policy-section" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p>If you have a question about this Privacy Policy or about the privacy-related behaviour of the application, you can contact the developer using the details below.</p>
+        <dl class="contact-details">
+          <dt>Developer</dt>
+          <dd>Muhammad Ilham Misbakhul Anwar</dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:ilhammisbakhul123@gmail.com">ilhammisbakhul123@gmail.com</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://www.instagram.com/ilhammsbkhl" rel="noopener">https://www.instagram.com/ilhammsbkhl</a></dd>
+        </dl>
+      </section>
     </main>
 
     <footer class="site-footer">

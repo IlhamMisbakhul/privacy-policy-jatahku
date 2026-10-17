@@ -296,6 +296,70 @@ a:hover {
   margin: 0 0 0.5rem;
 }
 
+/* --------------------------------------------------------- confirmation */
+
+.confirmation-section .confirmation-note {
+  background: var(--blue-050);
+  border: 1px solid var(--blue-100);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.understood-button {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.55rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--blue-600);
+  border: 1px solid var(--blue-700);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.understood-button:hover:not(:disabled) {
+  background: var(--blue-700);
+}
+
+.understood-button:disabled {
+  background: #9db3c8;
+  border-color: #9db3c8;
+  color: #f4f7fa;
+  cursor: not-allowed;
+}
+
+.confirmation-status {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  min-height: 1.2rem;
+}
+
+.confirmation-status.is-pending {
+  color: var(--ink-muted);
+}
+
+.confirmation-status.is-success {
+  color: #1b6b3a;
+  font-weight: 600;
+}
+
+.confirmation-status.is-error {
+  color: #a12622;
+  font-weight: 600;
+}
+
+.confirmation-status.is-note {
+  color: var(--ink);
+}
+
+.confirmation-sentinel {
+  height: 1px;
+  margin: 0;
+}
+
 /* --------------------------------------------------------- larger screens */
 
 @media (min-width: 640px) {

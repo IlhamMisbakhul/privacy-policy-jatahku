@@ -30,7 +30,16 @@ window.POLICY_I18N.en = {
     footerIdentity: "Privacy Policy for {appName}, provided by {developerName}.",
     gateTitle: "This page is not ready for publication.",
     gateMessage: "{placeholders} identity value(s) are not finalized and {translations} translation(s) have not been reviewed yet.",
-    languageChanged: "Language changed to {language}."
+    languageChanged: "Language changed to {language}.",
+    confirmSectionTitle: "Confirmation",
+    confirmIntro: "If you are reading this Privacy Policy inside the application, you can confirm that you have read it. The confirmation button becomes available after you reach the end of the policy.",
+    confirmButton: "Understood",
+    confirmWaiting: "Sending your confirmation to the application…",
+    confirmSuccess: "Your confirmation has been saved by the application.",
+    confirmFailure: "The application could not save your confirmation. Please try again.",
+    confirmTimeout: "The application has not responded yet. This page cannot confirm whether your confirmation was saved. Please try again.",
+    confirmAppNotReady: "The application has not confirmed it is ready, so confirmation cannot be sent. This page has not saved anything.",
+    confirmBrowserNote: "This page is open in a normal browser. Confirmation that you have read this Privacy Policy can only be recorded inside the application itself, so open this page inside the application to confirm. This website does not store any confirmation."
   },
   sections: {
     introduction: {
