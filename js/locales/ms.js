@@ -25,7 +25,16 @@ window.POLICY_I18N.ms = {
     footerIdentity: "Dasar Privasi untuk {appName}, disediakan oleh {developerName}.",
     gateTitle: "Halaman ini belum sedia untuk diterbitkan.",
     gateMessage: "{placeholders} nilai identiti belum dimuktamadkan dan {translations} terjemahan belum disemak.",
-    languageChanged: "Bahasa ditukar kepada {language}."
+    languageChanged: "Bahasa ditukar kepada {language}.",
+    confirmSectionTitle: "Pengesahan",
+    confirmIntro: "Jika anda membaca Dasar Privasi ini di dalam aplikasi, anda boleh mengesahkan bahawa anda telah membacanya. Butang pengesahan akan tersedia selepas anda mencapai akhir dasar.",
+    confirmButton: "Faham",
+    confirmWaiting: "Mengantar pengesahan anda ke aplikasi…",
+    confirmSuccess: "Pengesahan anda telah disimpan oleh aplikasi.",
+    confirmFailure: "Aplikasi tidak dapat menyimpan pengesahan anda. Cuba lagi.",
+    confirmTimeout: "Aplikasi belum merespons. Halaman ini tidak dapat mengesahkan sama ada pengesahan anda disimpan. Cuba lagi.",
+    confirmAppNotReady: "Aplikasi belum mengesahkan bahawa siap, jadi pengesahan tidak dapat dihantar. Halaman ini tidak menyimpan apa-apa.",
+    confirmBrowserNote: "Halaman ini dibuka di perisian pelayar biasa. Pengesahan bahawa anda telah membaca Dasar Privasi ini hanya boleh dicatat di dalam aplikasi itu sendiri, buka halaman ini di dalam aplikasi untuk mengesahkan. Laman web ini tidak menyimpan sebarang pengesahan."
   },
   sections: {
     introduction: {

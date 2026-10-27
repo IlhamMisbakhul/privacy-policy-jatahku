@@ -25,7 +25,16 @@ window.POLICY_I18N.ko = {
     footerIdentity: "{appName}(제공: {developerName})의 개인정보 처리방침입니다.",
     gateTitle: "이 페이지는 아직 게시할 준비가 되지 않았습니다.",
     gateMessage: "확정되지 않은 식별 값 {placeholders}개와 검토되지 않은 번역 {translations}개가 남아 있습니다.",
-    languageChanged: "언어가 {language}(으)로 변경되었습니다."
+    languageChanged: "언어가 {language}(으)로 변경되었습니다.",
+    confirmSectionTitle: "확인",
+    confirmIntro: "앱 내에서 이 개인정보처리방침을 읽는 경우, 읽었음을 확인할 수 있습니다. 확인 버튼은 정책의 끝에 도달한 후에 사용할 수 있게 됩니다.",
+    confirmButton: "확인함",
+    confirmWaiting: "앱으로 확인 전송 중…",
+    confirmSuccess: "사용자의 확인은 앱에 의해 저장되었습니다.",
+    confirmFailure: "앱이 사용자의 확인을 저장하지 못했습니다. 다시 시도하세요.",
+    confirmTimeout: "아직 앱에서 응답이 없습니다. 이 페이지는 사용자의 확인이 저장되었는지 확인할 수 없습니다. 다시 시도하세요.",
+    confirmAppNotReady: "앱이 준비 완료를 확인하지 않았으므로 확인을 보낼 수 없습니다. 이 페이지는 아무것도 저장하지 않았습니다.",
+    confirmBrowserNote: "이 페이지는 일반 브라우저에서 열려 있습니다. 이 개인정보처리방침을 읽었음을 확인하는 내용은 앱 자체에서만 기록될 수 있으므로, 앱 내에서 이 페이지를 열어 확인하세요. 이 웹사이트는 확인을 저장하지 않습니다."
   },
   sections: {
     introduction: {

@@ -25,7 +25,16 @@ window.POLICY_I18N.nl = {
     footerIdentity: "Privacybeleid voor {appName}, aangeboden door {developerName}.",
     gateTitle: "Deze pagina is nog niet klaar voor publicatie.",
     gateMessage: "{placeholders} identiteitswaarde(n) zijn nog niet definitief en {translations} vertaling(en) zijn nog niet nagekeken.",
-    languageChanged: "Taal gewijzigd naar {language}."
+    languageChanged: "Taal gewijzigd naar {language}.",
+    confirmSectionTitle: "Bevestiging",
+    confirmIntro: "Als u dit Privacybeleid in de applicatie leest, kunt u bevestigen dat u het heeft gelezen. De bevestigingsknop wordt beschikbaar nadat u het einde van het beleid hebt bereikt.",
+    confirmButton: "Begrepen",
+    confirmWaiting: "Uw bevestiging naar de applicatie verzenden…",
+    confirmSuccess: "Uw bevestiging is opgeslagen door de applicatie.",
+    confirmFailure: "De applicatie kon uw bevestiging niet opslaan. Probeer het opnieuw.",
+    confirmTimeout: "De applicatie heeft nog niet gereageerd. Deze pagina kan niet bevestigen of uw bevestiging is opgeslagen. Probeer het opnieuw.",
+    confirmAppNotReady: "De applicatie heeft niet bevestigd dat deze klaar is, dus de bevestiging kan niet worden verzonden. Deze pagina heeft niets opgeslagen.",
+    confirmBrowserNote: "Deze pagina is geopend in een normale browser. De bevestiging dat u dit Privacybeleid hebt gelezen kan alleen worden geregistreerd in de applicatie zelf, dus open deze pagina in de applicatie om te bevestigen. Deze website slaat geen bevestigingen op."
   },
   sections: {
     introduction: {

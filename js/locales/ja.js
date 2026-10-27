@@ -25,7 +25,16 @@ window.POLICY_I18N.ja = {
     footerIdentity: "{appName}（提供: {developerName}）のプライバシーポリシーです。",
     gateTitle: "このページはまだ公開できる状態ではありません。",
     gateMessage: "未確定の識別情報が {placeholders} 件、未確認の翻訳が {translations} 件あります。",
-    languageChanged: "言語を{language}に変更しました。"
+    languageChanged: "言語を{language}に変更しました。",
+    confirmSectionTitle: "確認",
+    confirmIntro: "アプリ内でこのプライバシーポリシーをお読みの場合、お読みになったことを確認できます。確認ボタンは、ポリシーの最後に到達した後で利用可能になります。",
+    confirmButton: "わかりました",
+    confirmWaiting: "アプリへの確認を送信中…",
+    confirmSuccess: "お客様の確認はアプリによって保存されました。",
+    confirmFailure: "アプリはお客様の確認を保存できませんでした。もう一度お試しください。",
+    confirmTimeout: "アプリからまだ応答がありません。このページでは、お客様の確認が保存されたかどうかを確認できません。もう一度お試しください。",
+    confirmAppNotReady: "アプリが準備完了を確認していないため、確認を送信できません。このページは何も保存していません。",
+    confirmBrowserNote: "このページは通常のブラウザで開かれています。このプライバシーポリシーを読んだことの確認は、アプリ自体でのみ記録できます。アプリ内でこのページを開いて確認してください。このウェブサイトは確認を保存しません。"
   },
   sections: {
     introduction: {

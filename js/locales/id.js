@@ -26,7 +26,16 @@ window.POLICY_I18N.id = {
     footerIdentity: "Kebijakan Privasi untuk {appName}, disediakan oleh {developerName}.",
     gateTitle: "Halaman ini belum siap dipublikasikan.",
     gateMessage: "{placeholders} nilai identitas belum difinalkan dan {translations} terjemahan belum ditinjau.",
-    languageChanged: "Bahasa diubah ke {language}."
+    languageChanged: "Bahasa diubah ke {language}.",
+    confirmSectionTitle: "Konfirmasi",
+    confirmIntro: "Jika Anda membaca Kebijakan Privasi ini di dalam aplikasi, Anda dapat mengonfirmasi bahwa Anda telah membacanya. Tombol konfirmasi akan tersedia setelah Anda mencapai akhir kebijakan.",
+    confirmButton: "Mengerti",
+    confirmWaiting: "Mengirim konfirmasi Anda ke aplikasi…",
+    confirmSuccess: "Konfirmasi Anda telah disimpan oleh aplikasi.",
+    confirmFailure: "Aplikasi tidak dapat menyimpan konfirmasi Anda. Coba lagi.",
+    confirmTimeout: "Aplikasi belum merespons. Halaman ini tidak dapat mengonfirmasi apakah konfirmasi Anda tersimpan. Coba lagi.",
+    confirmAppNotReady: "Aplikasi belum mengonfirmasi bahwa siap, jadi konfirmasi tidak dapat dikirim. Halaman ini tidak menyimpan apa pun.",
+    confirmBrowserNote: "Halaman ini dibuka di browser biasa. Konfirmasi bahwa Anda telah membaca Kebijakan Privasi ini hanya dapat dicatat di dalam aplikasi itu sendiri, buka halaman ini di dalam aplikasi untuk mengonfirmasi. Situs web ini tidak menyimpan konfirmasi apa pun."
   },
   sections: {
     introduction: {

@@ -25,7 +25,16 @@ window.POLICY_I18N.zh = {
     footerIdentity: "{appName}（由 {developerName} 提供）的隐私政策。",
     gateTitle: "本页面尚未达到发布条件。",
     gateMessage: "仍有 {placeholders} 项身份信息未最终确定，{translations} 项翻译尚未审阅。",
-    languageChanged: "语言已切换为{language}。"
+    languageChanged: "语言已切换为{language}。",
+    confirmSectionTitle: "确认",
+    confirmIntro: "如果您在应用内阅读本隐私政策，可以确认您已阅读。确认按钮在您阅读完政策后才可用。",
+    confirmButton: "明白了",
+    confirmWaiting: "正在将您的确认发送到应用…",
+    confirmSuccess: "您的确认已由应用保存。",
+    confirmFailure: "应用无法保存您的确认。请重试。",
+    confirmTimeout: "应用尚未响应。本页面无法确认您的确认是否已保存。请重试。",
+    confirmAppNotReady: "应用尚未确认已准备就绪，因此无法发送确认。本页面未保存任何内容。",
+    confirmBrowserNote: "本页面是在普通浏览器中打开的。您已阅读本隐私政策的确认只能在应用本身中记录，因此请在应用内打开本页面以进行确认。本网站不会存储任何确认。"
   },
   sections: {
     introduction: {

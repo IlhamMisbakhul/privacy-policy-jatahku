@@ -25,7 +25,16 @@ window.POLICY_I18N.it = {
     footerIdentity: "Informativa sulla privacy per {appName}, fornita da {developerName}.",
     gateTitle: "Questa pagina non è ancora pronta per la pubblicazione.",
     gateMessage: "{placeholders} valore/i di identità non sono ancora definiti e {translations} traduzione/i non sono ancora state revisionate.",
-    languageChanged: "Lingua cambiata in {language}."
+    languageChanged: "Lingua cambiata in {language}.",
+    confirmSectionTitle: "Conferma",
+    confirmIntro: "Se stai leggendo questa Informativa sulla Privacy all'interno dell'applicazione, puoi confermare di averla letta. Il pulsante di conferma diventa disponibile dopo aver raggiunto la fine dell'informativa.",
+    confirmButton: "Ho capito",
+    confirmWaiting: "Invio della conferma all'applicazione…",
+    confirmSuccess: "La tua conferma è stata salvata dall'applicazione.",
+    confirmFailure: "L'applicazione non è riuscita a salvare la tua conferma. Riprova.",
+    confirmTimeout: "L'applicazione non ha ancora risposto. Questa pagina non può confermare se la tua conferma è stata salvata. Riprova.",
+    confirmAppNotReady: "L'applicazione non ha confermato di essere pronta, quindi la conferma non può essere inviata. Questa pagina non ha salvato nulla.",
+    confirmBrowserNote: "Questa pagina è aperta in un normale browser. La conferma di aver letto questa Informativa sulla Privacy può essere registrata solo all'interno dell'applicazione stessa, quindi apri questa pagina all'interno dell'applicazione per confermare. Questo sito web non memorizza alcuna conferma."
   },
   sections: {
     introduction: {

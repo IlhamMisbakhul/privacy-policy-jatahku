@@ -25,7 +25,16 @@ window.POLICY_I18N.fr = {
     footerIdentity: "Politique de confidentialité pour {appName}, fournie par {developerName}.",
     gateTitle: "Cette page n'est pas encore prête à être publiée.",
     gateMessage: "{placeholders} valeur(s) d'identité ne sont pas finalisées et {translations} traduction(s) n'ont pas encore été relues.",
-    languageChanged: "Langue changée en {language}."
+    languageChanged: "Langue changée en {language}.",
+    confirmSectionTitle: "Confirmation",
+    confirmIntro: "Si vous lisez cette Politique de Confidentialité à l'intérieur de l'application, vous pouvez confirmer que vous l'avez lue. Le bouton de confirmation devient disponible après avoir atteint la fin de la politique.",
+    confirmButton: "Compris",
+    confirmWaiting: "Envoi de votre confirmation à l'application…",
+    confirmSuccess: "Votre confirmation a été enregistrée par l'application.",
+    confirmFailure: "L'application n'a pas pu enregistrer votre confirmation. Veuillez réessayer.",
+    confirmTimeout: "L'application n'a pas encore répondu. Cette page ne peut pas confirmer si votre confirmation a été enregistrée. Veuillez réessayer.",
+    confirmAppNotReady: "L'application n'a pas confirmé qu'elle est prête, donc la confirmation ne peut pas être envoyée. Cette page n'a rien enregistré.",
+    confirmBrowserNote: "Cette page est ouverte dans un navigateur normal. La confirmation que vous avez lu cette Politique de Confidentialité ne peut être enregistrée que dans l'application elle-même, alors ouvrez cette page dans l'application pour confirmer. Ce site web n'enregistre aucune confirmation."
   },
   sections: {
     introduction: {

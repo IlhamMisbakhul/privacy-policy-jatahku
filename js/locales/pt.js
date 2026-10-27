@@ -25,7 +25,16 @@ window.POLICY_I18N.pt = {
     footerIdentity: "Política de Privacidade do {appName}, fornecida por {developerName}.",
     gateTitle: "Esta página ainda não está pronta para publicação.",
     gateMessage: "{placeholders} valor(es) de identidade ainda não estão definidos e {translations} tradução(ões) ainda não foram revistas.",
-    languageChanged: "Idioma alterado para {language}."
+    languageChanged: "Idioma alterado para {language}.",
+    confirmSectionTitle: "Confirmação",
+    confirmIntro: "Se você está lendo esta Política de Privacidade dentro do aplicativo, pode confirmar que a leu. O botão de confirmação fica disponível depois que você alcançar o final da política.",
+    confirmButton: "Entendido",
+    confirmWaiting: "Enviando sua confirmação ao aplicativo…",
+    confirmSuccess: "Sua confirmação foi salva pelo aplicativo.",
+    confirmFailure: "O aplicativo não pôde salvar sua confirmação. Tente novamente.",
+    confirmTimeout: "O aplicativo não respondeu ainda. Esta página não pode confirmar se sua confirmação foi salva. Tente novamente.",
+    confirmAppNotReady: "O aplicativo não confirmou que está pronto, então a confirmação não pode ser enviada. Esta página não salvou nada.",
+    confirmBrowserNote: "Esta página está aberta em um navegador comum. A confirmação de que você leu esta Política de Privacidade só pode ser registrada dentro do próprio aplicativo, então abra esta página dentro do aplicativo para confirmar. Este site não armazena nenhuma confirmação."
   },
   sections: {
     introduction: {
